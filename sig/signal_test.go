@@ -1,4 +1,5 @@
 // +build linux
+
 /*
 Copyright © 2020 streamz <bytecodenerd@gmail.com>
 
@@ -33,7 +34,7 @@ import (
 
 var (
 	_, b, _, _ = runtime.Caller(0)
-	Testdata = strings.TrimSuffix(filepath.Dir(b), "/sig") + "/testdata/"
+	Testdata   = strings.TrimSuffix(filepath.Dir(b), "/sig") + "/testdata/"
 )
 
 func TestTrapSignal(t *testing.T) {

@@ -1,4 +1,5 @@
 // +build linux
+
 /*
 Copyright © 2020 streamz <bytecodenerd@gmail.com>
 
@@ -120,7 +121,7 @@ func TestRestart(t *testing.T) {
 		"/tmp/drinit-test-restart.pipe",
 		&InitOpts{})
 
-	joiner := i.join()	
+	joiner := i.join()
 
 	go i.Start()
 	time.Sleep(time.Second)
@@ -162,7 +163,7 @@ func TestSignal(t *testing.T) {
 		})
 
 	w.Add(1)
-	
+
 	joiner := i.join()
 
 	go i.Start()
